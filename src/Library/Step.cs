@@ -23,5 +23,37 @@ namespace Full_GRASP_And_SOLID.Library
         public int Time { get; set; }
 
         public Equipment Equipment { get; set; }
+
+        //Costo insumos
+
+
+        public double CostoInsumos
+        {
+            get
+            {
+                return CostoInsumos;
+            }
+            set
+            {
+                CostoInsumos = this.Input.UnitCost * this.Quantity;
+            }
+        } 
+
+        public double CostoEquipamento
+        {
+            get
+            {
+                return CostoEquipamento;
+            }
+            set
+            {
+                CostoEquipamento = this.Equipment.HourlyCost * this.Time;
+            }
+        }
+
+        
+
+        
+
     }
 }
